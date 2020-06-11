@@ -35,7 +35,7 @@ export AWS_SESSION_TOKEN="${TOKEN[2]}"
 aws sts get-caller-identity
 
 #setup prompt:
-export PS1="\h<${ACCT_ALIAS}:${AWS_USER}/\W> "
+export PS1="\h:${ACCT_ALIAS}/\${AWS_USER}:..\W> "
 
 #get into shell
 exec $SHELL
