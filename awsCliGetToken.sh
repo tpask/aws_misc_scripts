@@ -34,5 +34,8 @@ export AWS_SESSION_TOKEN="${TOKEN[2]}"
 #This is just to show AWS identity
 aws sts get-caller-identity
 
+#setup prompt:
+export PS1="\h:\W <${ACCT_ALIAS}:${AWS_USER}> "
+
 #get into shell
 exec $SHELL
