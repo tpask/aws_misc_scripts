@@ -13,7 +13,7 @@ else
   profile=$1
 fi
 
-#get acount, userArn
+#get account, userArn
 read -r -a CID <<<"$(aws --profile "${profile}" sts get-caller-identity --output text)"
 AWS_ACCT_NUM="${CID[0]}"
 AWS_USER_ARN="${CID[1]}"
